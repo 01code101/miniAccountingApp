@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accounting</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="main-container">
+
+    <button class="animation-btn ">animation</button>
+    <p class="develop-p animation">Developed by <span>Mostafa Saleh</span></p>
+    <h1>Super-Mini Accounting webApp</h1>
+
+    <form action="#">
+      <label class="input-label" for="in radio">label:</label>
+      <input id="in" type="text" required>
+
+      <div class="radio-container">
+        <input
+          id="first radio"
+          type="radio"
+          value="1"
+          name="gm"
+          required
+        />
+        <label id="first-radio-lable" for="first">empty</label>
+
+        <input
+          id="second radio"
+          type="radio"
+          value="2"
+          name="gm"
+          required
+        />
+        <label id="second-radio-lable" for="second">empty</label>
+      </div>
+
+      <input class='btn btn-form' type="button" value="Next" >
+    </form>
+
+
+    
+  <!-- work space -->
+  <div class="all-content-box">
+
+  <div class="workspace-container">
+    <form action="">
+
+      <label for="select">Person:</label>
+      <select class="select-form" name="person" id="select">
+        <option value="">empty</option>
+      </select>
+      <br />
+    </form>
+
+    <div class="content-box hidden-div">
+      <div class="data-container">
+        <div>
+          <p >name: <span class="name-workspace">Mostafa</span></p>
+          <p >id: <span class="id-workspace">****</span></p>
+          <p >Birth Year: <span class="birth-year-workspace">1198</span></p>
+          <p >Gender: <span class="gender-workspace">male</span></p>
+          <p >Marital Status: <span class="marital-status-workspace">single</span></p>
+          <p >Age: <span class="age-workspace">24</span></p>
+        </div>
+        <div class="finanical-container">
+
+          <div class="insert-fi-box">
+            <form action="">
+              <label for="salary">Salary: </label>
+              <input id="salary" type="number" required style="margin-left: 16px;">
+              <br>
+              <label for="expense">Expense: </label>
+              <input id="expense" type="number" required>
+              <br>
+              <input class='btn-fi-box' type="button" value="Insert" >
+            </form>
+          </div>
+
+          <div class="fi-box">
+            <p>Salary: <span>1000</span></p>
+            <p>Expense: <span>500</span></p>
+            <p>balance: <span>500</span></p>
+            <p>debts: <span>600</span></p>
+            <p>Credit: <span>400</span></p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="DD-tab-container">
+        <p class="creditor-tab">creditor</p>
+        <p class="debtor-tab">debtor</p>
+
+        <div class="creditor-content hidden-div">
+          <form action="">
+            
+            <label for="id">Person ID:</label>
+            <input id="id" type="number"  required>
+            <br>
+            <label for="amount">Amount:</label>
+            <input id="amount" type="number" min="1" required>
+            <br>
+            <label for="deadline">Deadline:</label>
+            <input id="deadline" type="text" required>
+            <!-- type in js -->
+
+            <input class='btn-creditor' type="button" value="Give" >
+          </form>
+        </div>
+        
+        <div class="debtor-content hidden-div">
+          <form action="">
+            <h4></h4>
+            <label for="id">Person ID:</label>
+            <input id="id" type="number"  required>
+            <br>
+            <label for="amount">Amount:</label>
+            <input id="amount" type="number" min="1" required>
+            <br>
+            <label for="deadline">Deadline:</label>
+            <input id="deadline" type="text" required>
+            <!-- type in js -->
+
+            <input class='btn-debtor' type="button" value="Request" >
+          </form>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="dd-container ">
+    <!-- number is the exact as the ddList index -->
+  <!-- <div class="dd-item-19"> 
+    <p class="dd-item-name">Jack</p>
+    <p class="dd-item-type debt-type">Debt</p>
+    <p class="dd-item-amount">Amount: <span>20</span></p>
+    <p class="dd-item-deadline">Deadline: <span>10</span></p>
+    <button class="dd-item-btn btn-reckon-debt">Reckon</button>
+  </div>
+  <div class="dd-item-20"> 
+    <p class="dd-item-name">Alex</p>
+    <p class="dd-item-type demand-type">Demand</p>
+    <p class="dd-item-amount">Amount: <span>20</span></p>
+    <p class="dd-item-deadline">Deadline: <span>10</span></p>
+    <button class="dd-item-btn btn-reckon-demand">Reckon</button>
+  </div> -->
+  </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- creditorContentEl   debtorContentEl-->
+<!-- creditorIDInputEl debtorIDInputEl-->
+<!-- creditorAmountInputEl debtorAmountInputEl -->

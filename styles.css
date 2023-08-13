@@ -1,0 +1,373 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --display-state: none;
+  --x-Coordinates: ;
+  --y-Coordinates: ;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+.main-container{
+  width: 1000px;
+  margin: 30px auto;
+  text-align: center;
+  background-color: rgba(250, 235, 215, 0.608);
+  padding: 30px;
+
+  position: relative;
+}
+
+.btn{
+  /* margin-top: 20px; */
+  padding: 2px 8px;
+  margin-left: 8px;
+}
+
+h1{
+  margin-bottom: 40px;
+  font-size: 20px;
+  border-bottom: 1px solid black;
+  padding: 5px 0px;
+  color: rgb(81, 81, 81);
+}
+
+.develop-p{
+  /* display: inline-block; */
+  font-size: 10px;
+  
+  transform: translateY(-25px);
+
+}
+
+.develop-p span{
+  color: rgb(39, 39, 255);
+  font-size: 12px;
+}
+
+
+
+.animation{
+  animation-name: label;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes label {
+  0%{
+    transform: translateX(-500px);
+    /* transform: translateY(-25px); */
+  }
+  100%{
+    transform: translate(+500px, -25px);
+  }
+}
+
+.animation-btn{
+  padding: 4px;
+  font-size: 11px;
+  background-color: rgb(255, 255, 65);
+
+  border: none;
+
+  position: absolute;
+  top: -14px;
+  left: -30px;
+
+  transition: all 0.4s;
+}
+
+.off-color{
+  background-color: rgb(181, 169, 169);
+}
+
+.animation-btn:hover{
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.563);
+  transform: scale(110%);
+}
+
+.radio-container{
+  /* display: inline-block; */
+  display: none;
+}
+
+.workspace-container{
+  background-color: white;
+  width: 60%;
+  height: auto;
+  padding: 20px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.content-box{
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.content-box p {
+  margin-bottom: 8px;
+  color: rgb(30, 30, 189);
+}
+
+.content-box p span{
+  color: rgb(78, 78, 78);
+  font-weight: bold;
+}
+
+
+/* ///////////////**
+**************
+DOM************ */
+.hidden-div{
+  display: none;
+}
+
+/* ////////////// */
+/* dd tab */
+.DD-tab-container{
+  background-color: #e9ecef00;
+  padding: 50px;
+  margin: 2px;
+  margin-top: 40px;
+  border-radius: 10px;
+  position: relative;
+  border: 2px solid #e9ecef;
+}
+
+.DD-tab-container p{
+  position: absolute;
+  border: 1px solid black;
+  padding: 4px 10px;
+  border-radius:4px ;
+  /* background-color: #c3fae8; */
+  top: -5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  
+}
+
+.creditor-tab{
+  left: 15%;
+  background-color: #a9e34b;
+}
+
+.debtor-tab{
+  right: 15%;
+  background-color: #ffc9c9;
+}
+
+.DD-tab-container div input{
+  margin-bottom: 15px;
+  margin-left: 10px;
+  color: #343a40;
+  padding: 4px;
+}
+
+.DD-tab-container div{
+  padding: 10px 14px;
+  border-radius: 3px;
+  border: 1px solid #d8dbdf;
+}
+
+.debtor-content{
+  background-color: #ffc9c9;
+  position: relative;
+}
+/*  */
+.debtor-content label[for=amount]::after{
+  content: 'Insufficient Money';
+  font-size: 10px;
+  font-weight: bold;
+  color: red;
+  margin-left: 6px;
+  background-color: yellow;
+  padding: 1px 2px;
+
+  position: absolute;
+  top: 46px;
+  right: 58px;
+
+  display: var(--display-state);
+}
+
+.creditor-content{
+  background-color: #a9e34b;
+}
+
+.transform-tab{
+  transform: translateY(-16px);
+}
+
+.data-container{
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 10px;
+}
+
+/* first input in the form */
+.insert-fi-box form :nth-child(2){
+  margin-bottom: 16px;
+}
+
+.insert-fi-box{
+  background-color: #d3d3d3;
+  padding: 15px  10px;
+  border-radius: 5px;
+  box-shadow: -1px 1px 2px 1px rgb(172, 172, 172);
+}
+
+.fi-box :nth-child(1),
+.fi-box :nth-child(5){
+  color: #9dff00;
+}
+
+.fi-box :nth-child(2),
+.fi-box :nth-child(4){
+  color: rgb(253, 36, 36);
+}
+
+.fi-box :nth-child(3),
+.fi-box  span{
+  color: rgb(80, 80, 80) !important;
+}
+
+.btn-fi-box{
+  padding: 2px 5px;
+  margin-top: 10px;
+  margin-left: 38%;
+}
+
+
+/* dd */
+.dd-container{
+  background-color: white;
+  margin-top: 30px;
+  width: 35%;
+  height: 525px;
+  padding: 15px;
+
+  overflow-y: scroll;
+
+}
+
+.all-content-box{
+  display: flex;
+  gap: 10px;
+}
+
+.dd-container div{
+  background-color: #f8f9fa;
+  margin-bottom: 12px;
+  padding: 8px 5px;
+  color: #212529;
+  border-radius: 8px;
+  box-shadow: 1px -1px 3px  rgba(92, 92, 92, 0.616);
+  font-size: 14px;
+
+  /* displaty */
+  display: grid;
+  grid-template-columns: 1.5fr auto 1.5fr;
+  row-gap: 10px;
+  /* grid-template-rows:  */
+  align-items: center;
+
+  position: relative;
+}
+
+.dd-container div p:nth-child(1){
+  background-color: #4dabf7;
+  padding: 4px 0 ;
+  border-radius: 3px;
+  color: #000d1a !important;
+}
+
+.dd-container div :nth-child(2){
+  grid-column: 3;
+
+  padding: 2px 3px;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+}
+
+.dd-container div :nth-child(4){
+  grid-column: 3;
+}
+
+.dd-item-btn{
+  grid-column: 2;
+  width: 65px;
+  justify-self: center;
+  background-color: white;
+  border: 1px solid #4dabf7;
+  border-radius: 3px;
+  padding: 3px;
+
+  transition: all 0.3s;
+}
+
+.dd-item-btn:hover{
+  border-color: rgba(255, 105, 180, 0);
+}
+
+
+/* DOM manipulation JS */
+.btn-reckon-debt:hover{
+  background-color: #f03e3e !important;
+  scale: 1.1;
+}
+
+.btn-reckon-demand:hover{
+  background-color: #94d82d !important;
+  scale: 1.2;
+}
+
+.debt-type{
+  background-color: #f03e3e;
+  border: 1px dotted #f03e3e;
+}
+.demand-type{
+  background-color: #94d82d;
+}
+
+.dd-item-container-1st{
+  position: relative;
+}
+
+.dd-item-name-after::after{
+  content: 'Short Balance' ;
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+  background-color: yellow;
+  padding: 2px 2px;
+
+  position: absolute;
+  top: var(--y-Coordinates);
+  left: var(--x-Coordinates);
+
+  z-index: 100;
+  /* display: var(--display-state); */
+  /* display: block; */
+}
+
+
+
+/* 
+dd-item-${i}-container-2nd
+failed-reckon
+
+dd-item-${i}
+opacity-low
+*/
+
+
+

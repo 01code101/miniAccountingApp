@@ -1,5 +1,5 @@
 # miniAccountingApp
-This WebApp was made by html/css/js and love, it is a very small accounting webapp and focuses on the debtor and creditor consept.
+This WebApp was made by html/css/js and love, it is a very small accounting webapp and focuses on the borrowing and lending money consept.
 it is very easy to use.!
 
 ## Instruction:
